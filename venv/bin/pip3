@@ -1,4 +1,4 @@
-#!/home/woo/djangoenv/venv/bin/python3
+#!/home/samuel26/my-first-blog/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

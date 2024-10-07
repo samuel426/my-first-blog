@@ -14,9 +14,11 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.conf.urls import url, include  # url로 수정
 from django.contrib import admin
-from django.urls import path
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    url(r'^admin/', admin.site.urls),  # 정규 표현식으로 admin 경로 설정
+    url(r'^', include('blog.urls')),   # 빈 경로도 정규 표현식으로 설정
 ]
+
